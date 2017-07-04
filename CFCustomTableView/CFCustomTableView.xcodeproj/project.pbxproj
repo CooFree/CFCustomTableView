@@ -13,6 +13,9 @@
 		B818CB311EFCEDDA0036CBD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B818CB301EFCEDDA0036CBD5 /* Assets.xcassets */; };
 		B818CB341EFCEDDA0036CBD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B818CB321EFCEDDA0036CBD5 /* LaunchScreen.storyboard */; };
 		B818CB371EFCEDDA0036CBD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B818CB361EFCEDDA0036CBD5 /* main.m */; };
+		B8C6DBA01F0BAF6100C504BA /* CFBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C6DB9F1F0BAF6100C504BA /* CFBaseTableView.m */; };
+		B8C6DBA31F0BAFA100C504BA /* CFBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C6DBA21F0BAFA100C504BA /* CFBaseTableViewController.m */; };
+		B8C6DBA61F0BAFFD00C504BA /* CFBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C6DBA51F0BAFFD00C504BA /* CFBaseTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		B818CB331EFCEDDA0036CBD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B818CB351EFCEDDA0036CBD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B818CB361EFCEDDA0036CBD5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B8C6DB9E1F0BAF6100C504BA /* CFBaseTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFBaseTableView.h; sourceTree = "<group>"; };
+		B8C6DB9F1F0BAF6100C504BA /* CFBaseTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFBaseTableView.m; sourceTree = "<group>"; };
+		B8C6DBA11F0BAFA100C504BA /* CFBaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFBaseTableViewController.h; sourceTree = "<group>"; };
+		B8C6DBA21F0BAFA100C504BA /* CFBaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFBaseTableViewController.m; sourceTree = "<group>"; };
+		B8C6DBA41F0BAFFD00C504BA /* CFBaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFBaseTableViewCell.h; sourceTree = "<group>"; };
+		B8C6DBA51F0BAFFD00C504BA /* CFBaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFBaseTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +71,12 @@
 				B818CB281EFCEDDA0036CBD5 /* AppDelegate.m */,
 				B818CB2A1EFCEDDA0036CBD5 /* ViewController.h */,
 				B818CB2B1EFCEDDA0036CBD5 /* ViewController.m */,
+				B8C6DB9E1F0BAF6100C504BA /* CFBaseTableView.h */,
+				B8C6DB9F1F0BAF6100C504BA /* CFBaseTableView.m */,
+				B8C6DBA11F0BAFA100C504BA /* CFBaseTableViewController.h */,
+				B8C6DBA21F0BAFA100C504BA /* CFBaseTableViewController.m */,
+				B8C6DBA41F0BAFFD00C504BA /* CFBaseTableViewCell.h */,
+				B8C6DBA51F0BAFFD00C504BA /* CFBaseTableViewCell.m */,
 				B818CB2D1EFCEDDA0036CBD5 /* Main.storyboard */,
 				B818CB301EFCEDDA0036CBD5 /* Assets.xcassets */,
 				B818CB321EFCEDDA0036CBD5 /* LaunchScreen.storyboard */,
@@ -143,7 +158,10 @@
 			files = (
 				B818CB2C1EFCEDDA0036CBD5 /* ViewController.m in Sources */,
 				B818CB371EFCEDDA0036CBD5 /* main.m in Sources */,
+				B8C6DBA31F0BAFA100C504BA /* CFBaseTableViewController.m in Sources */,
 				B818CB291EFCEDDA0036CBD5 /* AppDelegate.m in Sources */,
+				B8C6DBA01F0BAF6100C504BA /* CFBaseTableView.m in Sources */,
+				B8C6DBA61F0BAFFD00C504BA /* CFBaseTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +330,7 @@
 				B818CB3C1EFCEDDA0036CBD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
