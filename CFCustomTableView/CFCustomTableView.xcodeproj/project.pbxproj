@@ -13,6 +13,8 @@
 		B818CB311EFCEDDA0036CBD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B818CB301EFCEDDA0036CBD5 /* Assets.xcassets */; };
 		B818CB341EFCEDDA0036CBD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B818CB321EFCEDDA0036CBD5 /* LaunchScreen.storyboard */; };
 		B818CB371EFCEDDA0036CBD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B818CB361EFCEDDA0036CBD5 /* main.m */; };
+		B8BC2FC61F0CED8D000336F0 /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BC2FC51F0CED8D000336F0 /* ViewController1.m */; };
+		B8BC2FC91F0CEE41000336F0 /* CFSlideOperationViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BC2FC81F0CEE40000336F0 /* CFSlideOperationViewCell.m */; };
 		B8C6DBA01F0BAF6100C504BA /* CFBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C6DB9F1F0BAF6100C504BA /* CFBaseTableView.m */; };
 		B8C6DBA31F0BAFA100C504BA /* CFBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C6DBA21F0BAFA100C504BA /* CFBaseTableViewController.m */; };
 		B8C6DBA61F0BAFFD00C504BA /* CFBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C6DBA51F0BAFFD00C504BA /* CFBaseTableViewCell.m */; };
@@ -30,6 +32,10 @@
 		B818CB331EFCEDDA0036CBD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B818CB351EFCEDDA0036CBD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B818CB361EFCEDDA0036CBD5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B8BC2FC41F0CED8D000336F0 /* ViewController1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController1.h; sourceTree = "<group>"; };
+		B8BC2FC51F0CED8D000336F0 /* ViewController1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController1.m; sourceTree = "<group>"; };
+		B8BC2FC71F0CEE40000336F0 /* CFSlideOperationViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFSlideOperationViewCell.h; sourceTree = "<group>"; };
+		B8BC2FC81F0CEE40000336F0 /* CFSlideOperationViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFSlideOperationViewCell.m; sourceTree = "<group>"; };
 		B8C6DB9E1F0BAF6100C504BA /* CFBaseTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFBaseTableView.h; sourceTree = "<group>"; };
 		B8C6DB9F1F0BAF6100C504BA /* CFBaseTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFBaseTableView.m; sourceTree = "<group>"; };
 		B8C6DBA11F0BAFA100C504BA /* CFBaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFBaseTableViewController.h; sourceTree = "<group>"; };
@@ -80,9 +86,13 @@
 				B8C6DBA21F0BAFA100C504BA /* CFBaseTableViewController.m */,
 				B8C6DBA41F0BAFFD00C504BA /* CFBaseTableViewCell.h */,
 				B8C6DBA51F0BAFFD00C504BA /* CFBaseTableViewCell.m */,
+				B8BC2FC71F0CEE40000336F0 /* CFSlideOperationViewCell.h */,
+				B8BC2FC81F0CEE40000336F0 /* CFSlideOperationViewCell.m */,
 				B8C6DBA71F0C98A900C504BA /* CFBaseTableHeaderFooterview.h */,
 				B8C6DBA81F0C98A900C504BA /* CFBaseTableHeaderFooterview.m */,
 				B818CB2D1EFCEDDA0036CBD5 /* Main.storyboard */,
+				B8BC2FC41F0CED8D000336F0 /* ViewController1.h */,
+				B8BC2FC51F0CED8D000336F0 /* ViewController1.m */,
 				B818CB301EFCEDDA0036CBD5 /* Assets.xcassets */,
 				B818CB321EFCEDDA0036CBD5 /* LaunchScreen.storyboard */,
 				B818CB351EFCEDDA0036CBD5 /* Info.plist */,
@@ -165,9 +175,11 @@
 				B818CB371EFCEDDA0036CBD5 /* main.m in Sources */,
 				B8C6DBA31F0BAFA100C504BA /* CFBaseTableViewController.m in Sources */,
 				B818CB291EFCEDDA0036CBD5 /* AppDelegate.m in Sources */,
+				B8BC2FC61F0CED8D000336F0 /* ViewController1.m in Sources */,
 				B8C6DBA01F0BAF6100C504BA /* CFBaseTableView.m in Sources */,
 				B8C6DBA61F0BAFFD00C504BA /* CFBaseTableViewCell.m in Sources */,
 				B8C6DBA91F0C98A900C504BA /* CFBaseTableHeaderFooterview.m in Sources */,
+				B8BC2FC91F0CEE41000336F0 /* CFSlideOperationViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
