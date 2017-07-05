@@ -16,6 +16,7 @@
 		B8C6DBA01F0BAF6100C504BA /* CFBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C6DB9F1F0BAF6100C504BA /* CFBaseTableView.m */; };
 		B8C6DBA31F0BAFA100C504BA /* CFBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C6DBA21F0BAFA100C504BA /* CFBaseTableViewController.m */; };
 		B8C6DBA61F0BAFFD00C504BA /* CFBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C6DBA51F0BAFFD00C504BA /* CFBaseTableViewCell.m */; };
+		B8C6DBA91F0C98A900C504BA /* CFBaseTableHeaderFooterview.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C6DBA81F0C98A900C504BA /* CFBaseTableHeaderFooterview.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		B8C6DBA21F0BAFA100C504BA /* CFBaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFBaseTableViewController.m; sourceTree = "<group>"; };
 		B8C6DBA41F0BAFFD00C504BA /* CFBaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFBaseTableViewCell.h; sourceTree = "<group>"; };
 		B8C6DBA51F0BAFFD00C504BA /* CFBaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFBaseTableViewCell.m; sourceTree = "<group>"; };
+		B8C6DBA71F0C98A900C504BA /* CFBaseTableHeaderFooterview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFBaseTableHeaderFooterview.h; sourceTree = "<group>"; };
+		B8C6DBA81F0C98A900C504BA /* CFBaseTableHeaderFooterview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFBaseTableHeaderFooterview.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,8 @@
 				B8C6DBA21F0BAFA100C504BA /* CFBaseTableViewController.m */,
 				B8C6DBA41F0BAFFD00C504BA /* CFBaseTableViewCell.h */,
 				B8C6DBA51F0BAFFD00C504BA /* CFBaseTableViewCell.m */,
+				B8C6DBA71F0C98A900C504BA /* CFBaseTableHeaderFooterview.h */,
+				B8C6DBA81F0C98A900C504BA /* CFBaseTableHeaderFooterview.m */,
 				B818CB2D1EFCEDDA0036CBD5 /* Main.storyboard */,
 				B818CB301EFCEDDA0036CBD5 /* Assets.xcassets */,
 				B818CB321EFCEDDA0036CBD5 /* LaunchScreen.storyboard */,
@@ -162,6 +167,7 @@
 				B818CB291EFCEDDA0036CBD5 /* AppDelegate.m in Sources */,
 				B8C6DBA01F0BAF6100C504BA /* CFBaseTableView.m in Sources */,
 				B8C6DBA61F0BAFFD00C504BA /* CFBaseTableViewCell.m in Sources */,
+				B8C6DBA91F0C98A900C504BA /* CFBaseTableHeaderFooterview.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

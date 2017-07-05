@@ -10,4 +10,9 @@
 
 @interface CFBaseTableViewCell : UITableViewCell
 
+/**
+ *  快速创建一个不是从xib中加载的tableview cell
+ */
++ (instancetype)cellWithTableView:(UITableView *)tableView;
+
 @end

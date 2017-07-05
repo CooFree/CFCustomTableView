@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CFBaseTableViewController : UITableViewController
+@class CFBaseTableView;
+
+@interface CFBaseTableViewController : UIViewController
+
+@property (nonatomic, weak) CFBaseTableView *tableView;
 
 @end

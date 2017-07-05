@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "CFBaseTableViewController.h"
 @interface ViewController ()
 
 @end
@@ -19,6 +19,10 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (IBAction)btnAction:(id)sender {
+    CFBaseTableViewController *vc=[CFBaseTableViewController new];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
