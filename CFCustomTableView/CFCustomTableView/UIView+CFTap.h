@@ -10,4 +10,9 @@
 
 @interface UIView (CFTap)
 
+/**
+ *  动态添加手势
+ */
+- (void)setTapActionWithBlock:(void (^)(void))block ;
+
 @end
