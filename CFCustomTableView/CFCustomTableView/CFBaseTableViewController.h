@@ -24,4 +24,7 @@
 - (CGFloat)cf_sectionHeaderHeightAtSection:(NSInteger)section;
 - (CGFloat)cf_sectionFooterHeaderAtSection:(NSInteger)section;
 
+/** 分割线偏移*/
+- (UIEdgeInsets)cf_sepEdgeInsetsAtIndexPath:(NSIndexPath *)indexPath;
+
 @end

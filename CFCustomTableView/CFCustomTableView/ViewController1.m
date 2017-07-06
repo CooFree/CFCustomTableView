@@ -59,12 +59,12 @@
     if (boolFlag.boolValue) {
 
         CFBaseTableViewCell *cell = [CFBaseTableViewCell cellWithTableView:self.tableView];
-        cell.textLabel.text = @"这就是一个普通的cell";
+        cell.textLabel.text = @"普通的cell";
         return cell;
 
     } else {
         CFSlideTestCell *cell = [CFSlideTestCell cellWithTableView:self.tableView];
-        cell.name = @"这是一个可以滑动的cell，不信你左滑试试";
+        cell.name = @"可以滑动的cell";
         cell.delegate = self;
         cell.dataSource = self;
         //        cell.cellContentView.backgroundColor = [UIColor lightGrayColor];

@@ -21,7 +21,7 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    self.nameL.frame = self.cellContentView.bounds;
+    self.nameL.frame = CGRectMake(20, 0, self.cellContentView.frame.size.width-40, self.cellContentView.frame.size.height);
 }
 
 - (void)setName:(NSString *)name {

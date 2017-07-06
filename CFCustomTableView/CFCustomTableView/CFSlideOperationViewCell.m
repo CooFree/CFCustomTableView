@@ -21,6 +21,7 @@
 - (void)setDataSource:(id<CFSlideOperationViewCellDataSource>)dataSource {
     _dataSource = dataSource;
     if (dataSource) {
+        self.shouldSlide = YES;
         [self initViews];
     }
 }
@@ -233,7 +234,7 @@
         CGPoint point = [pan translationInView:self.contentView];
         // 左右滑动
         if (fabs(point.x) > fabs(point.y)) {
-            return YES;
+            return _shouldSlide;
         }
     }
 

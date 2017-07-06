@@ -114,6 +114,20 @@
     return 0.01;
 }
 
+/*设置分割线偏移间距并适配*/
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    UIEdgeInsets edgeInsets = UIEdgeInsetsMake(0, 15, 0, 0);
+    if ([self respondsToSelector:@selector(cf_sepEdgeInsetsAtIndexPath:)]) {
+        edgeInsets = [self cf_sepEdgeInsetsAtIndexPath:indexPath];
+    }
+    if ([tableView respondsToSelector:@selector(setSeparatorInset:)]) [tableView setSeparatorInset:edgeInsets];
+    if ([tableView respondsToSelector:@selector(setLayoutMargins:)]) [tableView setLayoutMargins:edgeInsets];
+    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) [cell setSeparatorInset:edgeInsets];
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) [cell setLayoutMargins:edgeInsets];
+}
+
+
+
 #pragma mark - 1️⃣➢➢➢ <#mark#>
 - (NSInteger)cf_numberOfSections { return 1; }
 
@@ -144,4 +158,6 @@
 
 - (CGFloat)cf_sectionFooterHeaderAtSection:(NSInteger)section { return 0.01; }
 
+- (UIEdgeInsets)cf_sepEdgeInsetsAtIndexPath:(NSIndexPath *)indexPath { return UIEdgeInsetsMake(0, 15, 0, 0);
+}
 @end

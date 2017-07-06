@@ -38,4 +38,7 @@
 
 @property (nonatomic, strong) UIView *tapView;
 
+/** 设置可否滑动  默认可以滑动*/
+@property (nonatomic, assign) BOOL shouldSlide;
+
 @end
