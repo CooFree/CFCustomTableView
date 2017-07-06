@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "CFBaseTableViewController.h"
+#import "ViewController1.h"
 @interface ViewController ()
 
 @end
@@ -20,7 +20,7 @@
 }
 
 - (IBAction)btnAction:(id)sender {
-    CFBaseTableViewController *vc=[CFBaseTableViewController new];
+    ViewController1 *vc=[ViewController1 new];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

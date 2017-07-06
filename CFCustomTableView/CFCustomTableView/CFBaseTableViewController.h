@@ -7,11 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@class CFBaseTableView;
+#import "CFBaseTableView.h"
+@class CFBaseTableViewCell;
 
 @interface CFBaseTableViewController : UIViewController
 
 @property (nonatomic, weak) CFBaseTableView *tableView;
+
+- (NSInteger)cf_numberOfSections;
+- (NSInteger)cf_numberOfRowsInSection:(NSInteger)section;
+- (void)cf_didSelectRowAtIndexPath:(NSIndexPath *)indexPath tableView:(UITableView *)tableView;
+- (CFBaseTableViewCell *)cf_cellAtIndexPath:(NSIndexPath *)indexPath;
+- (CGFloat)cf_cellheightAtIndexPath:(NSIndexPath *)indexPath;
+- (UIView *)cf_headerAtSection:(NSInteger)section;
+- (UIView *)cf_footerAtSection:(NSInteger)section ;
+- (CGFloat)cf_sectionHeaderHeightAtSection:(NSInteger)section;
+- (CGFloat)cf_sectionFooterHeaderAtSection:(NSInteger)section;
 
 @end

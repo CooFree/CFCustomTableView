@@ -75,13 +75,14 @@
         [cellContentView setTapActionWithBlock:^{
             [weakSelf reverse];
         }];
+
     }
     return _cellContentView;
 }
 
 - (void)reverse {
     [UIView animateWithDuration:0.2 animations:^{
-        CGPoint center = self.center;
+        CGPoint center = self.contentView.center;
         center.x = self.contentView.center.x;
         self.cellContentView.center = center;
 //        self.cellContentView.centerX = self.contentView.centerX;

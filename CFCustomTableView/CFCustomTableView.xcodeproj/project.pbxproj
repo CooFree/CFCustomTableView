@@ -13,6 +13,7 @@
 		B818CB311EFCEDDA0036CBD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B818CB301EFCEDDA0036CBD5 /* Assets.xcassets */; };
 		B818CB341EFCEDDA0036CBD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B818CB321EFCEDDA0036CBD5 /* LaunchScreen.storyboard */; };
 		B818CB371EFCEDDA0036CBD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B818CB361EFCEDDA0036CBD5 /* main.m */; };
+		B8B1B55F1F0DE42A00C07CF2 /* CFSlideTestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B1B55E1F0DE42A00C07CF2 /* CFSlideTestCell.m */; };
 		B8BC2FC61F0CED8D000336F0 /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BC2FC51F0CED8D000336F0 /* ViewController1.m */; };
 		B8BC2FC91F0CEE41000336F0 /* CFSlideOperationViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BC2FC81F0CEE40000336F0 /* CFSlideOperationViewCell.m */; };
 		B8BC2FD11F0CF4FE000336F0 /* UIView+CFTap.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BC2FD01F0CF4FE000336F0 /* UIView+CFTap.m */; };
@@ -33,6 +34,8 @@
 		B818CB331EFCEDDA0036CBD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B818CB351EFCEDDA0036CBD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B818CB361EFCEDDA0036CBD5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B8B1B55D1F0DE42A00C07CF2 /* CFSlideTestCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFSlideTestCell.h; sourceTree = "<group>"; };
+		B8B1B55E1F0DE42A00C07CF2 /* CFSlideTestCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFSlideTestCell.m; sourceTree = "<group>"; };
 		B8BC2FC41F0CED8D000336F0 /* ViewController1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController1.h; sourceTree = "<group>"; };
 		B8BC2FC51F0CED8D000336F0 /* ViewController1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController1.m; sourceTree = "<group>"; };
 		B8BC2FC71F0CEE40000336F0 /* CFSlideOperationViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFSlideOperationViewCell.h; sourceTree = "<group>"; };
@@ -98,6 +101,8 @@
 				B818CB2D1EFCEDDA0036CBD5 /* Main.storyboard */,
 				B8BC2FC41F0CED8D000336F0 /* ViewController1.h */,
 				B8BC2FC51F0CED8D000336F0 /* ViewController1.m */,
+				B8B1B55D1F0DE42A00C07CF2 /* CFSlideTestCell.h */,
+				B8B1B55E1F0DE42A00C07CF2 /* CFSlideTestCell.m */,
 				B818CB301EFCEDDA0036CBD5 /* Assets.xcassets */,
 				B818CB321EFCEDDA0036CBD5 /* LaunchScreen.storyboard */,
 				B818CB351EFCEDDA0036CBD5 /* Info.plist */,
@@ -176,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8B1B55F1F0DE42A00C07CF2 /* CFSlideTestCell.m in Sources */,
 				B818CB2C1EFCEDDA0036CBD5 /* ViewController.m in Sources */,
 				B818CB371EFCEDDA0036CBD5 /* main.m in Sources */,
 				B8C6DBA31F0BAFA100C504BA /* CFBaseTableViewController.m in Sources */,
