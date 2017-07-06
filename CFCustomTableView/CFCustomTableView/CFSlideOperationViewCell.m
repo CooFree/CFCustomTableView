@@ -62,19 +62,35 @@
         [self.delegate slideOperationViewCell:self didSelectButtonAtIndex:btn.tag - 1];
     }
 }
+- (UIView *)tapView {
+    if (_tapView==nil) {
+        UIView *tapView = [[UIView alloc] init];
+        tapView.frame = self.contentView.bounds;
+        tapView.hidden = YES;
+        tapView.backgroundColor = [[UIColor groupTableViewBackgroundColor]colorWithAlphaComponent:0.5];
+        _tapView = tapView;
 
+        WeakSelf(weakSelf);
+        [tapView setTapActionWithBlock:^{
+            [weakSelf reverse];
+        }];
+    }
+    return _tapView;
+}
 - (UIView *)cellContentView {
 
     if (_cellContentView == nil) {
         UIView *cellContentView = [[UIView alloc] init];
         cellContentView.backgroundColor = [UIColor whiteColor];
+        [cellContentView addSubview:self.tapView];
+
         [self.contentView addSubview:cellContentView];
         [self.contentView bringSubviewToFront:cellContentView];
         _cellContentView = cellContentView;
-        WeakSelf(weakSelf);
-        [cellContentView setTapActionWithBlock:^{
-            [weakSelf reverse];
-        }];
+//        WeakSelf(weakSelf);
+//        [cellContentView setTapActionWithBlock:^{
+//            [weakSelf reverse];
+//        }];
 
     }
     return _cellContentView;
@@ -85,6 +101,7 @@
         CGPoint center = self.contentView.center;
         center.x = self.contentView.center.x;
         self.cellContentView.center = center;
+        self.tapView.hidden = YES;
 //        self.cellContentView.centerX = self.contentView.centerX;
     }];
 }
@@ -111,6 +128,7 @@
     }
     [self.contentView bringSubviewToFront:self.cellContentView];
     self.cellContentView.frame = self.contentView.bounds;
+    self.tapView.frame = self.contentView.bounds;
     [super layoutSubviews];
 }
 
@@ -144,7 +162,7 @@
 
     // 根据状态设置东西 当开始滑动手势的时候，需要刷新其余cell，只让当前cell 显示设置和删除按钮
     if (panGest.state == UIGestureRecognizerStateBegan) { // 手势开始
-
+        
         if (self.delegate && [self.delegate respondsToSelector:@selector(slideOperationViewCellDidBeginSlide:)]) {
             [self.delegate slideOperationViewCellDidBeginSlide:self];
         }
@@ -187,12 +205,13 @@
             [UIView animateWithDuration:kAnimatedDuration animations:^{
 
                 self.cellContentView.center = CGPointMake(self.contentView.center.x, self.cellContentView.center.y);
+                self.tapView.hidden=YES;
             }];
         }
         if ((self.cellContentView.center.x < (self.contentView.center.x-[self totalW] / 2.0)) && (self.cellContentView.center.x > (self.contentView.center.x-[self totalW]))) {
 
             [UIView animateWithDuration:kAnimatedDuration animations:^{
-
+                self.tapView.hidden=NO;
                 self.cellContentView.center = CGPointMake(self.contentView.center.x-[self totalW], self.cellContentView.center.y);
             }];
         }

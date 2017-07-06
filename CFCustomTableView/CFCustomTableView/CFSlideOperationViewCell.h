@@ -36,4 +36,6 @@
 /** 容器视图 类似于contentView*/
 @property (nonatomic, weak) UIView *cellContentView;
 
+@property (nonatomic, strong) UIView *tapView;
+
 @end
