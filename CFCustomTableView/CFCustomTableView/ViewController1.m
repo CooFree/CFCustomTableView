@@ -24,7 +24,8 @@
     CGRect frame_first;
 }
 @property (nonatomic, strong) NSMutableArray *dataArray;
-
+@property (nonatomic, strong) UIImageView *topView;
+@property (nonatomic, strong) UIView *header;
 @end
 
 @implementation ViewController1
@@ -34,8 +35,31 @@
 
     [self setData];
 }
-- (void)setData {
+- (UIView *)header {
+    if (!_header) {
+        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 300)];
+        [view addSubview:self.topView];
 
+        _header = view;
+    }
+    return _header;
+}
+- (UIView *)tableHeader {
+   UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 300)];
+    [view addSubview:self.header];
+
+    return view;
+}
+- (UIImageView *)topView {
+    if (!_topView) {
+        _topView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 300)];
+        [_topView sd_setImageWithURL:[NSURL URLWithString:@"http://img2.duitang.com/uploads/item/201208/22/20120822155433_ZLnhS.jpeg"]];
+
+    }
+    return _topView;
+}
+- (void)setData {
+    self.tableView.tableHeaderView = self.topView;
     for (int i = 0 ; i < 5; i++) {
         ImageModel *model = [ImageModel new];
         model.imageurl = @"http://img4q.duitang.com/uploads/item/201408/11/20140811141753_iNtAF.jpeg";
@@ -160,5 +184,39 @@
 // 开始滑动的时候调用
 - (void)slideOperationViewCellDidBeginSlide:(CFSlideOperationViewCell *)cell {
     NSLog(@"---begin---slide");
+}
+
+#pragma mark - 1️⃣➢➢➢ header
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if (scrollView == self.tableView)
+    {
+//        [self layoutHeaderViewForScrollViewOffset:scrollView.contentOffset];
+
+    }
+}
+
+- (void)layoutHeaderViewForScrollViewOffset:(CGPoint)offset
+{
+    CGRect frame = self.header.frame;
+
+    if (offset.y > 0)
+    {
+        self.header.frame = frame;
+        self.header.clipsToBounds = YES;
+    }
+    else
+    {
+        CGFloat delta = 0.0f;
+        CGRect rect = CGRectMake(0, 0, self.header.frame.size.width, self.header.frame.size.height);
+        delta = fabs(MIN(0.0f, offset.y));
+        rect.origin.y -= delta;
+        rect.size.height += delta;
+        self.header.frame = rect;
+        self.header.clipsToBounds = NO;
+    }
+    NSLog(@"--%f  %f",_header.frame.size.height,_header.frame.origin.y);
+
 }
 @end
