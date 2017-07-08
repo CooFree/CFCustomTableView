@@ -18,10 +18,27 @@
     }
     return _nameL;
 }
+- (UIImageView *)img {
+    if (!_img) {
+        UIImageView *img = [[UIImageView alloc]init];
+        img.backgroundColor=[UIColor blueColor];
+        img.userInteractionEnabled=YES;
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onclick:)];
+        [img addGestureRecognizer:tap];
+        [self.cellContentView addSubview:img];
 
+        _img = img;
+    }
+    return _img;
+}
+-(void)onclick:(UITapGestureRecognizer *)tap{
+    [_imgDelegate backindexPath:_indexPath];
+}
 - (void)layoutSubviews {
     [super layoutSubviews];
-    self.nameL.frame = CGRectMake(20, 0, self.cellContentView.frame.size.width-40, self.cellContentView.frame.size.height);
+    self.img.frame = CGRectMake(15, self.cellContentView.frame.size.height/2-30, 60, 60);
+
+    self.nameL.frame = CGRectMake(CGRectGetMaxX(_img.frame)+15, 5, self.cellContentView.frame.size.width-CGRectGetMaxX(_img.frame)-30, self.cellContentView.frame.size.height-10);
 }
 
 - (void)setName:(NSString *)name {

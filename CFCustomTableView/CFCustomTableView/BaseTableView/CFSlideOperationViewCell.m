@@ -84,7 +84,7 @@
         UIView *cellContentView = [[UIView alloc] init];
         cellContentView.backgroundColor = [UIColor whiteColor];
         [cellContentView addSubview:self.tapView];
-
+        cellContentView.userInteractionEnabled=YES;
         [self.contentView addSubview:cellContentView];
         [self.contentView bringSubviewToFront:cellContentView];
         _cellContentView = cellContentView;

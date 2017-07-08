@@ -10,7 +10,19 @@
 #import "CFBaseTableViewCell.h"
 #import "CFSlideTestCell.h"
 
-@interface ViewController1 ()<CFSlideOperationViewCellDelegate,CFSlideOperationViewCellDataSource>
+#import "ImageModel.h"
+
+#import "SDWebImage/SDWebImage/UIImageView+WebCache.h"
+#import "ShowImageController.h"
+
+
+
+@interface ViewController1 ()<CFSlideOperationViewCellDelegate,CFSlideOperationViewCellDataSource,TableCellImgDelegate>
+{
+    NSInteger index;
+    UIImageView *imageview;
+    CGRect frame_first;
+}
 @property (nonatomic, strong) NSMutableArray *dataArray;
 
 @end
@@ -23,13 +35,33 @@
     [self setData];
 }
 - (void)setData {
-    int count = (int)self.dataArray.count;
-    for (int i = count; i < count + 20; i++) {
-        if (i % 2 == 0) {
-            [self.dataArray addObject:@(YES)];
-        } else {
-            [self.dataArray addObject:@(NO)];
-        }
+
+    for (int i = 0 ; i < 5; i++) {
+        ImageModel *model = [ImageModel new];
+        model.imageurl = @"http://img4q.duitang.com/uploads/item/201408/11/20140811141753_iNtAF.jpeg";
+        model.width = 1280;
+        model.height = 720;
+        [self.dataArray addObject:model];
+        ImageModel *model1 = [ImageModel new];
+        model1.imageurl = @"http://imgsrc.baidu.com/forum/pic/item/8b82b9014a90f603fa18d50f3912b31bb151edca.jpg";
+        model1.width = 1280;
+        model1.height = 720;
+        [_dataArray addObject:model1];
+        ImageModel *model2 = [ImageModel new];
+        model2.imageurl = @"http://imgsrc.baidu.com/forum/pic/item/8e230cf3d7ca7bcb3acde5a2be096b63f724a8b2.jpg";
+        model2.width = 1280;
+        model2.height = 720;
+        [_dataArray addObject:model2];
+        ImageModel *model3 = [ImageModel new];
+        model3.imageurl = @"http://att.bbs.duowan.com/forum/201210/20/210446opy9p5pghu015p9u.jpg";
+        model3.width = 1280;
+        model3.height = 720;
+        [_dataArray addObject:model3];
+        ImageModel *model4 = [ImageModel new];
+        model4.imageurl = @"http://img5.duitang.com/uploads/item/201404/11/20140411214939_XswXa.jpeg";
+        model4.width = 1280;
+        model4.height = 720;
+        [_dataArray addObject:model4];
     }
     [self.tableView reloadData];
 }
@@ -54,26 +86,39 @@
 
 - (CFBaseTableViewCell *)cf_cellAtIndexPath:(NSIndexPath *)indexPath {
 
-    NSNumber *boolFlag = self.dataArray[indexPath.row];
+    CFSlideTestCell *cell = [CFSlideTestCell cellWithTableView:self.tableView];
+    cell.name = @"可以滑动的cell";
+    cell.delegate = self;
+    cell.dataSource = self;
+    //        cell.cellContentView.backgroundColor = [UIColor lightGrayColor];
+    // 加载内容加到这上面。。
+    ImageModel *model = [self.dataArray objectAtIndex:indexPath.row];
+    cell.indexPath=indexPath;
+    cell.imgDelegate = self;
+    [cell.img sd_setImageWithURL:[NSURL URLWithString:model.imageurl]];
 
-    if (boolFlag.boolValue) {
+    return cell;
 
-        CFBaseTableViewCell *cell = [CFBaseTableViewCell cellWithTableView:self.tableView];
-        cell.textLabel.text = @"普通的cell";
-        return cell;
-
-    } else {
-        CFSlideTestCell *cell = [CFSlideTestCell cellWithTableView:self.tableView];
-        cell.name = @"可以滑动的cell";
-        cell.delegate = self;
-        cell.dataSource = self;
-        //        cell.cellContentView.backgroundColor = [UIColor lightGrayColor];
-        // 加载内容加到这上面。。
-        return cell;
-    }
     return [[CFBaseTableViewCell alloc] init];
 }
+#pragma mark - TableCellImgDelegate
+-(void)backindexPath:(NSIndexPath *)indexPath{
+    index = [indexPath row];
+    CFSlideTestCell *cell = (CFSlideTestCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+    imageview = cell.img;
+    frame_first = CGRectMake(cell.frame.origin.x+imageview.frame.origin.x, cell.frame.origin.y+imageview.frame.origin.y-self.tableView.contentOffset.y, imageview.frame.size.width, imageview.frame.size.height);
 
+    ShowImageController *img = [ShowImageController new];
+    img.data = self.dataArray;
+    img.index = index;
+    img.type = 1;
+    //动画类型，目前只有2种.0和1
+    img.pop_type = 0;
+    ImageModel *model = [self.dataArray objectAtIndex:index];
+    [img showImageView:frame_first image:imageview.image w:model.width h:model.height];
+
+    [self presentViewController:img animated:NO completion:nil];
+}
 
 
 

@@ -8,9 +8,18 @@
 
 #import "CFSlideOperationViewCell.h"
 
+@protocol TableCellImgDelegate <NSObject>
+
+-(void)backindexPath:(NSIndexPath *)indexPath;
+
+@end
+
 @interface CFSlideTestCell : CFSlideOperationViewCell
+
+@property (weak, nonatomic) id<TableCellImgDelegate> imgDelegate;
+@property (strong, nonatomic) NSIndexPath *indexPath;
 
 @property (nonatomic, weak) NSString *name;
 @property (nonatomic, weak) UILabel *nameL;
-
+@property (nonatomic, strong) UIImageView  *img;
 @end
