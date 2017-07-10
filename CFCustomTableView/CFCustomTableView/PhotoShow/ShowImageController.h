@@ -12,6 +12,8 @@
 
 @interface ShowImageController : UIViewController
 
+@property CGFloat tableCellSapce;
+
 @property (strong, nonatomic) UIScrollView *scrollView;
 //图片存储数据
 @property (weak, nonatomic) NSArray *data;

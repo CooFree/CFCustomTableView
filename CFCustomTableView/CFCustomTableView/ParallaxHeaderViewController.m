@@ -6,7 +6,7 @@
 //  Copyright © 2017年 CooFree. All rights reserved.
 //
 
-#import "ViewController1.h"
+#import "ParallaxHeaderViewController.h"
 #import "CFBaseTableViewCell.h"
 #import "CFSlideTestCell.h"
 
@@ -14,10 +14,10 @@
 
 #import "SDWebImage/SDWebImage/UIImageView+WebCache.h"
 #import "ShowImageController.h"
+#import "UIScrollView+CFParallaxHeader.h"
 
 
-
-@interface ViewController1 ()<CFSlideOperationViewCellDelegate,CFSlideOperationViewCellDataSource,TableCellImgDelegate>
+@interface ParallaxHeaderViewController ()<CFSlideOperationViewCellDelegate,CFSlideOperationViewCellDataSource,TableCellImgDelegate>
 {
     NSInteger index;
     UIImageView *imageview;
@@ -28,12 +28,15 @@
 @property (nonatomic, strong) UIView *header;
 @end
 
-@implementation ViewController1
+@implementation ParallaxHeaderViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    
     [self setData];
+
+    NSLog(@"--%d",self.navigationController.navigationBar.translucent);
 }
 - (UIView *)header {
     if (!_header) {
@@ -59,7 +62,9 @@
     return _topView;
 }
 - (void)setData {
-    self.tableView.tableHeaderView = self.topView;
+//    self.tableView.frame=CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height-64);
+    [self.tableView addSpringHeadView:self.topView isTranslucent:self.navigationController.navigationBar.translucent];
+
     for (int i = 0 ; i < 5; i++) {
         ImageModel *model = [ImageModel new];
         model.imageurl = @"http://img4q.duitang.com/uploads/item/201408/11/20140811141753_iNtAF.jpeg";
@@ -101,7 +106,7 @@
 }
 
 - (CGFloat)cf_cellheightAtIndexPath:(NSIndexPath *)indexPath {
-    return 100;
+    return 70;
 }
 - (UIEdgeInsets)cf_sepEdgeInsetsAtIndexPath:(NSIndexPath *)indexPath {
     return UIEdgeInsetsZero;
@@ -133,6 +138,7 @@
     frame_first = CGRectMake(cell.frame.origin.x+imageview.frame.origin.x, cell.frame.origin.y+imageview.frame.origin.y-self.tableView.contentOffset.y, imageview.frame.size.width, imageview.frame.size.height);
 
     ShowImageController *img = [ShowImageController new];
+    img.tableCellSapce = imageview.frame.origin.y*2;
     img.data = self.dataArray;
     img.index = index;
     img.type = 1;
@@ -186,37 +192,5 @@
     NSLog(@"---begin---slide");
 }
 
-#pragma mark - 1️⃣➢➢➢ header
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-    if (scrollView == self.tableView)
-    {
-//        [self layoutHeaderViewForScrollViewOffset:scrollView.contentOffset];
-
-    }
-}
-
-- (void)layoutHeaderViewForScrollViewOffset:(CGPoint)offset
-{
-    CGRect frame = self.header.frame;
-
-    if (offset.y > 0)
-    {
-        self.header.frame = frame;
-        self.header.clipsToBounds = YES;
-    }
-    else
-    {
-        CGFloat delta = 0.0f;
-        CGRect rect = CGRectMake(0, 0, self.header.frame.size.width, self.header.frame.size.height);
-        delta = fabs(MIN(0.0f, offset.y));
-        rect.origin.y -= delta;
-        rect.size.height += delta;
-        self.header.frame = rect;
-        self.header.clipsToBounds = NO;
-    }
-    NSLog(@"--%f  %f",_header.frame.size.height,_header.frame.origin.y);
-
-}
 @end

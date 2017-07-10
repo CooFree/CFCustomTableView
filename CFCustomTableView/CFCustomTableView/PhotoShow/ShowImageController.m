@@ -12,8 +12,7 @@
 
 #import "UIImageView+WebCache.h"
 
-#define SCROLLMAR 20
-#define TABLEVIEWMAR 10
+//#define SCROLLMAR 20
 #define COLLECTIONMAR 10
 #define MXIMAR 4
 
@@ -29,6 +28,7 @@
 @end
 
 @implementation ShowImageController
+@synthesize tableCellSapce;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -209,7 +209,7 @@
     [imageview sd_setImageWithURL:[NSURL URLWithString:model.imageurl]];
     if (_type == 1) {
         NSInteger cha = page - _index;
-        CGFloat y = zframe.origin.y + (cha * (zframe.size.height + TABLEVIEWMAR));
+        CGFloat y = zframe.origin.y + (cha * (zframe.size.height + tableCellSapce));
         wyrame = CGRectMake(zframe.origin.x, y, zframe.size.width, zframe.size.height);
     }else if(_type == 2){
         NSInteger a1 = _index % 3;

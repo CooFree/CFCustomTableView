@@ -36,7 +36,7 @@
 }
 - (void)layoutSubviews {
     [super layoutSubviews];
-    self.img.frame = CGRectMake(15, self.cellContentView.frame.size.height/2-30, 60, 60);
+    self.img.frame = CGRectMake(15, 5, 60, 60);
 
     self.nameL.frame = CGRectMake(CGRectGetMaxX(_img.frame)+15, 5, self.cellContentView.frame.size.width-CGRectGetMaxX(_img.frame)-30, self.cellContentView.frame.size.height-10);
 }

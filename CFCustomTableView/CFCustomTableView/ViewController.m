@@ -7,22 +7,37 @@
 //
 
 #import "ViewController.h"
-#import "ViewController1.h"
-@interface ViewController ()
 
+#import "CFBaseTableViewCell.h"
+
+@interface ViewController ()
+@property (nonatomic, strong) NSArray *data;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
 
-- (IBAction)btnAction:(id)sender {
-    ViewController1 *vc=[ViewController1 new];
+    self.data = @[@"ParallaxHeader"];
+
+    [self.tableView reloadData];
+}
+- (void)cf_didSelectRowAtIndexPath:(NSIndexPath *)indexPath tableView:(UITableView *)tableView {
+    NSString *str = [self.data[indexPath.row] stringByAppendingString:@"ViewController"];
+    UIViewController *vc = [NSClassFromString(str) new];
     [self.navigationController pushViewController:vc animated:YES];
 }
+- (CFBaseTableViewCell *)cf_cellAtIndexPath:(NSIndexPath *)indexPath {
+    CFBaseTableViewCell *cell = [CFBaseTableViewCell cellWithTableView:self.tableView];
+    cell.textLabel.text = self.data[indexPath.row];
+    return cell;
+}
+- (NSInteger)cf_numberOfRowsInSection:(NSInteger)section {
+    return self.data.count;
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

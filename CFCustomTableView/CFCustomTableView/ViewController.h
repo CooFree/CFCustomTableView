@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CFBaseTableViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : CFBaseTableViewController
 
 
 @end

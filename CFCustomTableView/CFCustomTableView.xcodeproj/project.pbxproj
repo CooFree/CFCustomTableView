@@ -14,6 +14,7 @@
 		B818CB311EFCEDDA0036CBD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B818CB301EFCEDDA0036CBD5 /* Assets.xcassets */; };
 		B818CB341EFCEDDA0036CBD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B818CB321EFCEDDA0036CBD5 /* LaunchScreen.storyboard */; };
 		B818CB371EFCEDDA0036CBD5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B818CB361EFCEDDA0036CBD5 /* main.m */; };
+		B8269BCE1F1356B3003BE389 /* UIScrollView+CFParallaxHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = B8269BCD1F1356B3003BE389 /* UIScrollView+CFParallaxHeader.m */; };
 		B8777BAC1F0F95AA00F3461D /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A439BF1F0F8BCC00B1F211 /* UIImageView+WebCache.m */; };
 		B8777BAD1F0F95F000F3461D /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A439A61F0F8BCC00B1F211 /* NSData+ImageContentType.m */; };
 		B8777BAE1F0F95F000F3461D /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A439A81F0F8BCC00B1F211 /* SDImageCache.m */; };
@@ -31,7 +32,7 @@
 		B8A439C41F0F909E00B1F211 /* ShowImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A439C31F0F909E00B1F211 /* ShowImageController.m */; };
 		B8A439C71F0F916100B1F211 /* ImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A439C61F0F916100B1F211 /* ImageModel.m */; };
 		B8B1B55F1F0DE42A00C07CF2 /* CFSlideTestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B1B55E1F0DE42A00C07CF2 /* CFSlideTestCell.m */; };
-		B8BC2FC61F0CED8D000336F0 /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BC2FC51F0CED8D000336F0 /* ViewController1.m */; };
+		B8BC2FC61F0CED8D000336F0 /* ParallaxHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BC2FC51F0CED8D000336F0 /* ParallaxHeaderViewController.m */; };
 		B8BC2FC91F0CEE41000336F0 /* CFSlideOperationViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BC2FC81F0CEE40000336F0 /* CFSlideOperationViewCell.m */; };
 		B8BC2FD11F0CF4FE000336F0 /* UIView+CFTap.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BC2FD01F0CF4FE000336F0 /* UIView+CFTap.m */; };
 		B8C6DBA01F0BAF6100C504BA /* CFBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C6DB9F1F0BAF6100C504BA /* CFBaseTableView.m */; };
@@ -53,6 +54,8 @@
 		B818CB331EFCEDDA0036CBD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B818CB351EFCEDDA0036CBD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B818CB361EFCEDDA0036CBD5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B8269BCC1F1356B3003BE389 /* UIScrollView+CFParallaxHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+CFParallaxHeader.h"; sourceTree = "<group>"; };
+		B8269BCD1F1356B3003BE389 /* UIScrollView+CFParallaxHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+CFParallaxHeader.m"; sourceTree = "<group>"; };
 		B8A439A21F0F8BCC00B1F211 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		B8A439A31F0F8BCC00B1F211 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B8A439A51F0F8BCC00B1F211 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -90,8 +93,8 @@
 		B8A439C61F0F916100B1F211 /* ImageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageModel.m; sourceTree = "<group>"; };
 		B8B1B55D1F0DE42A00C07CF2 /* CFSlideTestCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFSlideTestCell.h; sourceTree = "<group>"; };
 		B8B1B55E1F0DE42A00C07CF2 /* CFSlideTestCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFSlideTestCell.m; sourceTree = "<group>"; };
-		B8BC2FC41F0CED8D000336F0 /* ViewController1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController1.h; sourceTree = "<group>"; };
-		B8BC2FC51F0CED8D000336F0 /* ViewController1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController1.m; sourceTree = "<group>"; };
+		B8BC2FC41F0CED8D000336F0 /* ParallaxHeaderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParallaxHeaderViewController.h; sourceTree = "<group>"; };
+		B8BC2FC51F0CED8D000336F0 /* ParallaxHeaderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParallaxHeaderViewController.m; sourceTree = "<group>"; };
 		B8BC2FC71F0CEE40000336F0 /* CFSlideOperationViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFSlideOperationViewCell.h; sourceTree = "<group>"; };
 		B8BC2FC81F0CEE40000336F0 /* CFSlideOperationViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CFSlideOperationViewCell.m; sourceTree = "<group>"; };
 		B8BC2FCF1F0CF4FE000336F0 /* UIView+CFTap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CFTap.h"; sourceTree = "<group>"; };
@@ -136,6 +139,7 @@
 		B818CB261EFCEDD90036CBD5 /* CFCustomTableView */ = {
 			isa = PBXGroup;
 			children = (
+				B8269BCB1F13568B003BE389 /* ParallaxHeader */,
 				B8A4399A1F0F86A400B1F211 /* PhotoShow */,
 				B818CB271EFCEDD90036CBD5 /* AppDelegate.h */,
 				B818CB281EFCEDDA0036CBD5 /* AppDelegate.m */,
@@ -143,8 +147,8 @@
 				B818CB2B1EFCEDDA0036CBD5 /* ViewController.m */,
 				B8A439A01F0F86E500B1F211 /* BaseTableView */,
 				B818CB2D1EFCEDDA0036CBD5 /* Main.storyboard */,
-				B8BC2FC41F0CED8D000336F0 /* ViewController1.h */,
-				B8BC2FC51F0CED8D000336F0 /* ViewController1.m */,
+				B8BC2FC41F0CED8D000336F0 /* ParallaxHeaderViewController.h */,
+				B8BC2FC51F0CED8D000336F0 /* ParallaxHeaderViewController.m */,
 				B8A439C51F0F916100B1F211 /* ImageModel.h */,
 				B8A439C61F0F916100B1F211 /* ImageModel.m */,
 				B8B1B55D1F0DE42A00C07CF2 /* CFSlideTestCell.h */,
@@ -156,6 +160,15 @@
 				B818CB361EFCEDDA0036CBD5 /* main.m */,
 			);
 			path = CFCustomTableView;
+			sourceTree = "<group>";
+		};
+		B8269BCB1F13568B003BE389 /* ParallaxHeader */ = {
+			isa = PBXGroup;
+			children = (
+				B8269BCC1F1356B3003BE389 /* UIScrollView+CFParallaxHeader.h */,
+				B8269BCD1F1356B3003BE389 /* UIScrollView+CFParallaxHeader.m */,
+			);
+			path = ParallaxHeader;
 			sourceTree = "<group>";
 		};
 		B8A4399A1F0F86A400B1F211 /* PhotoShow */ = {
@@ -324,11 +337,12 @@
 				B8B1B55F1F0DE42A00C07CF2 /* CFSlideTestCell.m in Sources */,
 				B818CB2C1EFCEDDA0036CBD5 /* ViewController.m in Sources */,
 				B818CB371EFCEDDA0036CBD5 /* main.m in Sources */,
+				B8269BCE1F1356B3003BE389 /* UIScrollView+CFParallaxHeader.m in Sources */,
 				B8C6DBA31F0BAFA100C504BA /* CFBaseTableViewController.m in Sources */,
 				B8BC2FD11F0CF4FE000336F0 /* UIView+CFTap.m in Sources */,
 				B818CB291EFCEDDA0036CBD5 /* AppDelegate.m in Sources */,
 				B8A439C71F0F916100B1F211 /* ImageModel.m in Sources */,
-				B8BC2FC61F0CED8D000336F0 /* ViewController1.m in Sources */,
+				B8BC2FC61F0CED8D000336F0 /* ParallaxHeaderViewController.m in Sources */,
 				B8C6DBA01F0BAF6100C504BA /* CFBaseTableView.m in Sources */,
 				B8C6DBA61F0BAFFD00C504BA /* CFBaseTableViewCell.m in Sources */,
 				B8C6DBA91F0C98A900C504BA /* CFBaseTableHeaderFooterview.m in Sources */,

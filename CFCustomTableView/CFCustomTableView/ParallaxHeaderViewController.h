@@ -8,6 +8,6 @@
 
 #import "CFBaseTableViewController.h"
 
-@interface ViewController1 : CFBaseTableViewController
+@interface ParallaxHeaderViewController : CFBaseTableViewController
 
 @end

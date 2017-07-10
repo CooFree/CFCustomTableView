@@ -19,7 +19,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
 
     [self.tableView reloadData];
 }
@@ -29,7 +28,7 @@
  */
 - (CFBaseTableView *)tableView {
     if(!_tableView){
-        CFBaseTableView *tab = [[CFBaseTableView alloc] init];
+        CFBaseTableView *tab = [[CFBaseTableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
         tab.dataSource = self;
         tab.delegate = self;
         tab.backgroundColor = [UIColor whiteColor];
