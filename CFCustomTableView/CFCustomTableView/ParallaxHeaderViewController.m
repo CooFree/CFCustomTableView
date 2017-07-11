@@ -19,7 +19,7 @@
 
 @interface ParallaxHeaderViewController ()<CFSlideOperationViewCellDelegate,CFSlideOperationViewCellDataSource,TableCellImgDelegate>
 {
-    NSInteger index;
+    NSInteger indexRow;
     UIImageView *imageview;
     CGRect frame_first;
 }
@@ -36,7 +36,6 @@
     
     [self setData];
 
-    NSLog(@"--%d",self.navigationController.navigationBar.translucent);
 }
 - (UIView *)header {
     if (!_header) {
@@ -63,7 +62,8 @@
 }
 - (void)setData {
 //    self.tableView.frame=CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height-64);
-    [self.tableView addSpringHeadView:self.topView isTranslucent:self.navigationController.navigationBar.translucent];
+//    [self.tableView addParallaxHeadView:self.topView isTranslucent:self.navigationController.navigationBar.translucent];
+    [self.tableView addParallaxHeadView:self.topView];
 
 //    for (int i = 0 ; i < 5; i++) {
         ImageModel *model = [ImageModel new];
@@ -132,7 +132,7 @@
 }
 #pragma mark - TableCellImgDelegate
 -(void)backindexPath:(NSIndexPath *)indexPath{
-    index = [indexPath row];
+    indexRow = [indexPath row];
     CFSlideTestCell *cell = (CFSlideTestCell *)[self.tableView cellForRowAtIndexPath:indexPath];
     imageview = cell.img;
     frame_first = CGRectMake(cell.frame.origin.x+imageview.frame.origin.x, cell.frame.origin.y+imageview.frame.origin.y-self.tableView.contentOffset.y, imageview.frame.size.width, imageview.frame.size.height);
@@ -140,11 +140,11 @@
     ShowImageController *img = [ShowImageController new];
     img.tableCellSapce = imageview.frame.origin.y*2;
     img.data = self.dataArray;
-    img.index = index;
+    img.index = indexRow;
     img.type = 1;
     //动画类型，目前只有2种.0和1
     img.pop_type = 0;
-    ImageModel *model = [self.dataArray objectAtIndex:index];
+    ImageModel *model = [self.dataArray objectAtIndex:indexRow];
     [img showImageView:frame_first image:imageview.image w:model.width h:model.height];
 
     [self presentViewController:img animated:NO completion:nil];
@@ -177,10 +177,10 @@
 
 - (void)slideOperationViewCell:(CFSlideOperationViewCell *)cell didSelectButtonAtIndex:(NSInteger)index {
     NSLog(@"%@", [NSString stringWithFormat:@"点击了第几%ld个按钮", index]);
-
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
     if (index==2) {
-        [self.dataArray removeObjectAtIndex:index];
-        [self.tableView deleteRowsAtIndexPaths:@[[self.tableView indexPathForCell:cell]] withRowAnimation:UITableViewRowAnimationNone];
+        [self.dataArray removeObjectAtIndex:indexPath.row];
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
     }
 
 }

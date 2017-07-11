@@ -35,7 +35,11 @@ static char HeaderHeight;
     CGFloat headerH = [objc_getAssociatedObject(self, &HeaderHeight) floatValue];
     return headerH;
 }
-- (void)addSpringHeadView:(UIView *)view isTranslucent:(BOOL)translucent {
+
+- (void)addParallaxHeadView:(UIView *)view {
+    [self addParallaxHeadView:view isTranslucent:YES];
+}
+- (void)addParallaxHeadView:(UIView *)view isTranslucent:(BOOL)translucent {
     self.contentInset = UIEdgeInsetsMake(view.bounds.size.height-(translucent?64:0), 0, 0, 0);
     [self addSubview:view];
     view.frame = CGRectMake(0, -view.bounds.size.height, view.bounds.size.width, view.bounds.size.height);

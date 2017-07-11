@@ -13,6 +13,7 @@
 @property (nonatomic, weak) UIView *topView;
 @property (nonatomic) CGFloat parallaxHeight;
 
-- (void)addSpringHeadView:(UIView *)view isTranslucent:(BOOL)translucent;
+- (void)addParallaxHeadView:(UIView *)view;
+- (void)addParallaxHeadView:(UIView *)view isTranslucent:(BOOL)translucent;
 
 @end
