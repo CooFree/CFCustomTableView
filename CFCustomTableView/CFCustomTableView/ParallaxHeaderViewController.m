@@ -65,7 +65,7 @@
 //    self.tableView.frame=CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height-64);
     [self.tableView addSpringHeadView:self.topView isTranslucent:self.navigationController.navigationBar.translucent];
 
-    for (int i = 0 ; i < 5; i++) {
+//    for (int i = 0 ; i < 5; i++) {
         ImageModel *model = [ImageModel new];
         model.imageurl = @"http://img4q.duitang.com/uploads/item/201408/11/20140811141753_iNtAF.jpeg";
         model.width = 1280;
@@ -91,7 +91,7 @@
         model4.width = 1280;
         model4.height = 720;
         [_dataArray addObject:model4];
-    }
+//    }
     [self.tableView reloadData];
 }
 - (NSMutableArray *)dataArray {
@@ -162,10 +162,13 @@
     [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     UIColor *bgColor = [UIColor redColor];
     if (index == 0) {
+        [btn setTitle:@"收藏" forState:UIControlStateNormal];
         bgColor = [UIColor redColor];
     } else if (index == 1) {
+        [btn setTitle:@"评论" forState:UIControlStateNormal];
         bgColor = [UIColor greenColor];
     } else if (index == 2) {
+        [btn setTitle:@"删除" forState:UIControlStateNormal];
         bgColor = [UIColor whiteColor];
     }
     [btn setBackgroundColor:bgColor];
@@ -174,6 +177,12 @@
 
 - (void)slideOperationViewCell:(CFSlideOperationViewCell *)cell didSelectButtonAtIndex:(NSInteger)index {
     NSLog(@"%@", [NSString stringWithFormat:@"点击了第几%ld个按钮", index]);
+
+    if (index==2) {
+        [self.dataArray removeObjectAtIndex:index];
+        [self.tableView deleteRowsAtIndexPaths:@[[self.tableView indexPathForCell:cell]] withRowAnimation:UITableViewRowAnimationNone];
+    }
+
 }
 
 - (CGSize)slideOperationViewCell:(CFSlideOperationViewCell *)cell sizeAtIndex:(NSInteger)index {
