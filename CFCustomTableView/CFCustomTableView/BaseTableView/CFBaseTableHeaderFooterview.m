@@ -19,6 +19,12 @@
     [tableView registerClass:[self class] forHeaderFooterViewReuseIdentifier:identifer];
     return [tableView dequeueReusableHeaderFooterViewWithIdentifier:identifer];
 }
+- (instancetype)initWithReuseIdentifier:(NSString *)reuseIdentifier {
 
+    if (self = [super initWithReuseIdentifier:reuseIdentifier]) {
+        self.contentView.backgroundColor = [UIColor whiteColor];
+    }
+    return self;
+}
 
 @end
