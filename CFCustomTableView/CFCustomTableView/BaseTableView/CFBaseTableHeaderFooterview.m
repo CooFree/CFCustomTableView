@@ -21,10 +21,34 @@
 }
 - (instancetype)initWithReuseIdentifier:(NSString *)reuseIdentifier {
 
+
     if (self = [super initWithReuseIdentifier:reuseIdentifier]) {
-        self.contentView.backgroundColor = [UIColor whiteColor];
+
+        [self setUpHeaderFooterView];
+
+        [self bulidHeaderFooterSubViews];
     }
+
     return self;
+}
+
+- (void)setUpHeaderFooterView {
+
+
+}
+
+- (void)bulidHeaderFooterSubViews {
+
+}
+
+- (void)loadHeaderFooterData {
+
+
+}
+
+- (void)setHeaderFooterBackgroundColor:(UIColor *)color {
+
+    self.contentView.backgroundColor = color;
 }
 
 @end
