@@ -181,6 +181,8 @@
     if (index==2) {
         [self.dataArray removeObjectAtIndex:indexPath.row];
         [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+
+        [self.tableView reloadData];
     }
 
 }

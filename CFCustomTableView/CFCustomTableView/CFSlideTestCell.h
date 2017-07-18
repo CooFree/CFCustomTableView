@@ -18,6 +18,7 @@
 
 @property (weak, nonatomic) id<TableCellImgDelegate> imgDelegate;
 @property (strong, nonatomic) NSIndexPath *indexPath;
+@property (nonatomic, copy) dispatch_block_t imgBlock;
 
 @property (nonatomic, weak) NSString *name;
 @property (nonatomic, weak) UILabel *nameL;
