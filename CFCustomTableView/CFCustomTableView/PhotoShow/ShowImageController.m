@@ -12,7 +12,7 @@
 
 #import "UIImageView+WebCache.h"
 
-//#define SCROLLMAR 20
+#define SCROLLMAR 20
 #define COLLECTIONMAR 10
 #define MXIMAR 4
 
@@ -37,14 +37,14 @@
 }
 
 -(void)initData{
-    _scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    _scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width+SCROLLMAR, self.view.frame.size.height)];
     _scrollView.pagingEnabled=YES;
     _scrollView.delegate=self;
     [self.view addSubview:_scrollView];
 
     for (int i = 0 ; i < [_data count]; i++) {
 //        showimage = [[[NSBundle mainBundle] loadNibNamed:@"ShowImageView" owner:self options:nil] firstObject];
-     ShowImgView  * showimage = [[ShowImgView alloc]initWithFrame:CGRectMake(_scrollView.frame.size.width*i ,_scrollView.frame.origin.y, _scrollView.frame.size.width ,_scrollView.frame.size.height)];
+     ShowImgView  * showimage = [[ShowImgView alloc]initWithFrame:CGRectMake(_scrollView.frame.size.width*i ,_scrollView.frame.origin.y, _scrollView.frame.size.width -SCROLLMAR,_scrollView.frame.size.height)];
         showimage.model = [_data objectAtIndex:i];
         showimage.delegate = self;
         [_scrollView addSubview:showimage];
