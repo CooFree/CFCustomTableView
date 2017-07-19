@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8077BE31F1F4DA0009A52D5 /* WaterWaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8077BE21F1F4DA0009A52D5 /* WaterWaveViewController.m */; };
+		B8077BE41F1F4E86009A52D5 /* WaterWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8077BE01F1F4D76009A52D5 /* WaterWaveView.m */; };
 		B811BF1C1F10709E008CF181 /* ShowImgView.m in Sources */ = {isa = PBXBuildFile; fileRef = B811BF1B1F10709E008CF181 /* ShowImgView.m */; };
 		B818CB291EFCEDDA0036CBD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B818CB281EFCEDDA0036CBD5 /* AppDelegate.m */; };
 		B818CB2C1EFCEDDA0036CBD5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B818CB2B1EFCEDDA0036CBD5 /* ViewController.m */; };
@@ -42,6 +44,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B8077BDF1F1F4D76009A52D5 /* WaterWaveView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaterWaveView.h; sourceTree = "<group>"; };
+		B8077BE01F1F4D76009A52D5 /* WaterWaveView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterWaveView.m; sourceTree = "<group>"; };
+		B8077BE11F1F4DA0009A52D5 /* WaterWaveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaterWaveViewController.h; sourceTree = "<group>"; };
+		B8077BE21F1F4DA0009A52D5 /* WaterWaveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterWaveViewController.m; sourceTree = "<group>"; };
 		B811BF1A1F10709E008CF181 /* ShowImgView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowImgView.h; sourceTree = "<group>"; };
 		B811BF1B1F10709E008CF181 /* ShowImgView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowImgView.m; sourceTree = "<group>"; };
 		B818CB241EFCEDD90036CBD5 /* CFCustomTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CFCustomTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +126,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B8077BDE1F1F4D76009A52D5 /* WaterWaveView */ = {
+			isa = PBXGroup;
+			children = (
+				B8077BDF1F1F4D76009A52D5 /* WaterWaveView.h */,
+				B8077BE01F1F4D76009A52D5 /* WaterWaveView.m */,
+			);
+			path = WaterWaveView;
+			sourceTree = "<group>";
+		};
 		B818CB1B1EFCEDD90036CBD5 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +154,7 @@
 		B818CB261EFCEDD90036CBD5 /* CFCustomTableView */ = {
 			isa = PBXGroup;
 			children = (
+				B8077BDE1F1F4D76009A52D5 /* WaterWaveView */,
 				B8269BCB1F13568B003BE389 /* ParallaxHeader */,
 				B8A4399A1F0F86A400B1F211 /* PhotoShow */,
 				B818CB271EFCEDD90036CBD5 /* AppDelegate.h */,
@@ -149,6 +165,8 @@
 				B818CB2D1EFCEDDA0036CBD5 /* Main.storyboard */,
 				B8BC2FC41F0CED8D000336F0 /* ParallaxHeaderViewController.h */,
 				B8BC2FC51F0CED8D000336F0 /* ParallaxHeaderViewController.m */,
+				B8077BE11F1F4DA0009A52D5 /* WaterWaveViewController.h */,
+				B8077BE21F1F4DA0009A52D5 /* WaterWaveViewController.m */,
 				B8A439C51F0F916100B1F211 /* ImageModel.h */,
 				B8A439C61F0F916100B1F211 /* ImageModel.m */,
 				B8B1B55D1F0DE42A00C07CF2 /* CFSlideTestCell.h */,
@@ -318,6 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8077BE41F1F4E86009A52D5 /* WaterWaveView.m in Sources */,
 				B8777BAD1F0F95F000F3461D /* NSData+ImageContentType.m in Sources */,
 				B8777BAE1F0F95F000F3461D /* SDImageCache.m in Sources */,
 				B8777BAF1F0F95F000F3461D /* SDWebImageCompat.m in Sources */,
@@ -345,6 +364,7 @@
 				B8BC2FC61F0CED8D000336F0 /* ParallaxHeaderViewController.m in Sources */,
 				B8C6DBA01F0BAF6100C504BA /* CFBaseTableView.m in Sources */,
 				B8C6DBA61F0BAFFD00C504BA /* CFBaseTableViewCell.m in Sources */,
+				B8077BE31F1F4DA0009A52D5 /* WaterWaveViewController.m in Sources */,
 				B8C6DBA91F0C98A900C504BA /* CFBaseTableHeaderFooterview.m in Sources */,
 				B8BC2FC91F0CEE41000336F0 /* CFSlideOperationViewCell.m in Sources */,
 			);

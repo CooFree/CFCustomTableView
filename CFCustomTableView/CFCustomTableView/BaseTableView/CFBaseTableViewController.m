@@ -31,7 +31,7 @@
         CFBaseTableView *tab = [[CFBaseTableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
         tab.dataSource = self;
         tab.delegate = self;
-        tab.backgroundColor = [UIColor whiteColor];
+//        tab.backgroundColor = [UIColor whiteColor];
         [self.view addSubview:tab];
         _tableView = tab;
         _tableView.frame=self.view.bounds;
@@ -78,7 +78,6 @@
     }
     // 1. 创建cell
     CFBaseTableViewCell *cell = [CFBaseTableViewCell cellWithTableView:self.tableView];
-
     // 2. 返回cell
     return cell;
 }

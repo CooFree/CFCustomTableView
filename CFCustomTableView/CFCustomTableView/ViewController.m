@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.data = @[@"ParallaxHeader"];
+    self.data = @[@"ParallaxHeader",@"WaterWave"];
 
     [self.tableView reloadData];
 }
