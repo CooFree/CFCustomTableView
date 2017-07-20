@@ -27,6 +27,7 @@
     NSString *str = [self.data[indexPath.row] stringByAppendingString:@"ViewController"];
     UIViewController *vc = [NSClassFromString(str) new];
     [self.navigationController pushViewController:vc animated:YES];
+
 }
 - (CFBaseTableViewCell *)cf_cellAtIndexPath:(NSIndexPath *)indexPath {
     CFBaseTableViewCell *cell = [CFBaseTableViewCell cellWithTableView:self.tableView];

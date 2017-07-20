@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		B8077BE31F1F4DA0009A52D5 /* WaterWaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8077BE21F1F4DA0009A52D5 /* WaterWaveViewController.m */; };
 		B8077BE41F1F4E86009A52D5 /* WaterWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8077BE01F1F4D76009A52D5 /* WaterWaveView.m */; };
+		B8077BEA1F204A81009A52D5 /* UIViewController+XLSlideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = B8077BE71F204A04009A52D5 /* UIViewController+XLSlideMenu.m */; };
+		B8077BEB1F204A81009A52D5 /* XLSlideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = B8077BE91F204A04009A52D5 /* XLSlideMenu.m */; };
+		B8077BEE1F204D12009A52D5 /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8077BED1F204D12009A52D5 /* LeftMenuViewController.m */; };
 		B811BF1C1F10709E008CF181 /* ShowImgView.m in Sources */ = {isa = PBXBuildFile; fileRef = B811BF1B1F10709E008CF181 /* ShowImgView.m */; };
 		B818CB291EFCEDDA0036CBD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B818CB281EFCEDDA0036CBD5 /* AppDelegate.m */; };
 		B818CB2C1EFCEDDA0036CBD5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B818CB2B1EFCEDDA0036CBD5 /* ViewController.m */; };
@@ -48,6 +51,12 @@
 		B8077BE01F1F4D76009A52D5 /* WaterWaveView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterWaveView.m; sourceTree = "<group>"; };
 		B8077BE11F1F4DA0009A52D5 /* WaterWaveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaterWaveViewController.h; sourceTree = "<group>"; };
 		B8077BE21F1F4DA0009A52D5 /* WaterWaveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterWaveViewController.m; sourceTree = "<group>"; };
+		B8077BE61F204A04009A52D5 /* UIViewController+XLSlideMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+XLSlideMenu.h"; sourceTree = "<group>"; };
+		B8077BE71F204A04009A52D5 /* UIViewController+XLSlideMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+XLSlideMenu.m"; sourceTree = "<group>"; };
+		B8077BE81F204A04009A52D5 /* XLSlideMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLSlideMenu.h; sourceTree = "<group>"; };
+		B8077BE91F204A04009A52D5 /* XLSlideMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLSlideMenu.m; sourceTree = "<group>"; };
+		B8077BEC1F204D12009A52D5 /* LeftMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftMenuViewController.h; sourceTree = "<group>"; };
+		B8077BED1F204D12009A52D5 /* LeftMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftMenuViewController.m; sourceTree = "<group>"; };
 		B811BF1A1F10709E008CF181 /* ShowImgView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowImgView.h; sourceTree = "<group>"; };
 		B811BF1B1F10709E008CF181 /* ShowImgView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowImgView.m; sourceTree = "<group>"; };
 		B818CB241EFCEDD90036CBD5 /* CFCustomTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CFCustomTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +144,17 @@
 			path = WaterWaveView;
 			sourceTree = "<group>";
 		};
+		B8077BE51F204A04009A52D5 /* XLSlideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				B8077BE61F204A04009A52D5 /* UIViewController+XLSlideMenu.h */,
+				B8077BE71F204A04009A52D5 /* UIViewController+XLSlideMenu.m */,
+				B8077BE81F204A04009A52D5 /* XLSlideMenu.h */,
+				B8077BE91F204A04009A52D5 /* XLSlideMenu.m */,
+			);
+			path = XLSlideMenu;
+			sourceTree = "<group>";
+		};
 		B818CB1B1EFCEDD90036CBD5 = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +174,7 @@
 		B818CB261EFCEDD90036CBD5 /* CFCustomTableView */ = {
 			isa = PBXGroup;
 			children = (
+				B8077BE51F204A04009A52D5 /* XLSlideMenu */,
 				B8077BDE1F1F4D76009A52D5 /* WaterWaveView */,
 				B8269BCB1F13568B003BE389 /* ParallaxHeader */,
 				B8A4399A1F0F86A400B1F211 /* PhotoShow */,
@@ -163,6 +184,8 @@
 				B818CB2B1EFCEDDA0036CBD5 /* ViewController.m */,
 				B8A439A01F0F86E500B1F211 /* BaseTableView */,
 				B818CB2D1EFCEDDA0036CBD5 /* Main.storyboard */,
+				B8077BEC1F204D12009A52D5 /* LeftMenuViewController.h */,
+				B8077BED1F204D12009A52D5 /* LeftMenuViewController.m */,
 				B8BC2FC41F0CED8D000336F0 /* ParallaxHeaderViewController.h */,
 				B8BC2FC51F0CED8D000336F0 /* ParallaxHeaderViewController.m */,
 				B8077BE11F1F4DA0009A52D5 /* WaterWaveViewController.h */,
@@ -336,6 +359,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8077BEA1F204A81009A52D5 /* UIViewController+XLSlideMenu.m in Sources */,
+				B8077BEB1F204A81009A52D5 /* XLSlideMenu.m in Sources */,
 				B8077BE41F1F4E86009A52D5 /* WaterWaveView.m in Sources */,
 				B8777BAD1F0F95F000F3461D /* NSData+ImageContentType.m in Sources */,
 				B8777BAE1F0F95F000F3461D /* SDImageCache.m in Sources */,
@@ -346,6 +371,7 @@
 				B8777BB31F0F95F000F3461D /* SDWebImageManager.m in Sources */,
 				B8777BB41F0F95F000F3461D /* SDWebImagePrefetcher.m in Sources */,
 				B8777BB51F0F95F000F3461D /* UIButton+WebCache.m in Sources */,
+				B8077BEE1F204D12009A52D5 /* LeftMenuViewController.m in Sources */,
 				B811BF1C1F10709E008CF181 /* ShowImgView.m in Sources */,
 				B8777BB61F0F95F000F3461D /* UIImage+GIF.m in Sources */,
 				B8777BB71F0F95F000F3461D /* UIImage+MultiFormat.m in Sources */,

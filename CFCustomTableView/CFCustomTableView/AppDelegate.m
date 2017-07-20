@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+#import "LeftMenuViewController.h"
+#import "XLSlideMenu.h"
 
 @interface AppDelegate ()
 
@@ -20,6 +23,13 @@
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"Avenir" size:20],
                                                            NSForegroundColorAttributeName: [UIColor blackColor] }];
     [UINavigationBar appearance].tintColor = [UIColor lightGrayColor];
+
+
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[ViewController new]];
+    XLSlideMenu *slideMenu = [[XLSlideMenu alloc] initWithRootViewController:nav];
+    LeftMenuViewController *leftVC = [[LeftMenuViewController alloc] init];
+    slideMenu.leftViewController = leftVC;
+    self.window.rootViewController = slideMenu;
     return YES;
 }
 
