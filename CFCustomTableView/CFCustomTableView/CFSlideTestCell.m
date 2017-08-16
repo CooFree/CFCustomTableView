@@ -33,9 +33,6 @@
 }
 -(void)onclick:(UITapGestureRecognizer *)tap{
     [_imgDelegate backindexPath:_indexPath];
-//    if (self.imgBlock) {
-//        self.imgBlock();
-//    }
 }
 - (void)layoutSubviews {
     [super layoutSubviews];

@@ -12,19 +12,51 @@
 
 @protocol CFSlideOperationViewCellDataSource <NSObject>
 
+
+/**
+ 滑动按钮数量
+ */
 - (NSInteger)numberOfItemsInSlideOperation:(CFSlideOperationViewCell *)cell;
 
+/**
+ 对按钮进行初始化
+
+ @param cell <#cell description#>
+ @param index <#index description#>
+ @return <#return value description#>
+ */
 - (UIButton *)slideOperationViewCell:(CFSlideOperationViewCell *)cell
                        buttonAtIndex:(NSInteger)index;
 
+
+/**
+ 按钮的大小
+
+ @param cell <#cell description#>
+ @param index <#index description#>
+ @return <#return value description#>
+ */
 - (CGSize)slideOperationViewCell:(CFSlideOperationViewCell *)cell sizeAtIndex:(NSInteger)index;
 
 @end
 
 @protocol CFSlideOperationViewCellDelegate <NSObject>
 
+
+/**
+ 点击按钮 操作
+
+ @param cell <#cell description#>
+ @param index <#index description#>
+ */
 - (void)slideOperationViewCell:(CFSlideOperationViewCell *)cell didSelectButtonAtIndex:(NSInteger)index;
 
+
+/**
+ 开始滑动的时候
+
+ @param cell <#cell description#>
+ */
 - (void)slideOperationViewCellDidBeginSlide:(CFSlideOperationViewCell *)cell;
 
 @end

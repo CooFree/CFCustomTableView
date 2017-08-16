@@ -88,10 +88,6 @@
         [self.contentView addSubview:cellContentView];
         [self.contentView bringSubviewToFront:cellContentView];
         _cellContentView = cellContentView;
-//        WeakSelf(weakSelf);
-//        [cellContentView setTapActionWithBlock:^{
-//            [weakSelf reverse];
-//        }];
 
     }
     return _cellContentView;

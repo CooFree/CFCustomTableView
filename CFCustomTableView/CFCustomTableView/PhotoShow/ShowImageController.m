@@ -7,7 +7,6 @@
 //
 
 #import "ShowImageController.h"
-//#import "ShowImageView.h"
 #import "ShowImgView.h"
 
 #import "UIImageView+WebCache.h"
@@ -43,7 +42,6 @@
     [self.view addSubview:_scrollView];
 
     for (int i = 0 ; i < [_data count]; i++) {
-//        showimage = [[[NSBundle mainBundle] loadNibNamed:@"ShowImageView" owner:self options:nil] firstObject];
      ShowImgView  * showimage = [[ShowImgView alloc]initWithFrame:CGRectMake(_scrollView.frame.size.width*i ,_scrollView.frame.origin.y, _scrollView.frame.size.width -SCROLLMAR,_scrollView.frame.size.height)];
         showimage.model = [_data objectAtIndex:i];
         showimage.delegate = self;
@@ -253,45 +251,12 @@
 
 -(void)goNewBig{
     imageview.clipsToBounds = YES;
-    /*
-    POPSpringAnimation *positionAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPosition];
-    positionAnimation.toValue = [NSValue valueWithCGPoint:self.view.center];
-    [imageview.layer pop_addAnimation:positionAnimation forKey:@"layerPositionAnimation"];
-    POPSpringAnimation *boundsAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerBounds];
-    boundsAnimation.toValue = [NSValue valueWithCGRect:CGRectMake(0, 0, bigSize.width, bigSize.height)];
-    boundsAnimation.springBounciness = 20.f;
-    [imageview.layer pop_addAnimation:boundsAnimation forKey:@"boundsAnimation"];
-    [boundsAnimation setCompletionBlock:^(POPAnimation *animation, BOOL finished) {
-        [_scrollView setContentOffset:CGPointMake(_scrollView.frame.size.width*_index, 0)];
-        [_scrollView setHidden:NO];
-        [imageview setHidden:YES];
-    }];
-     */
 }
 
 -(void)didNewbig{
     [_scrollView setHidden:YES];
     [imageview setHidden:NO];
     imageview.clipsToBounds = YES;
-    /*
-    POPSpringAnimation *positionAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPosition];
-    CGPoint point = CGPointMake(zframe.origin.x + zframe.size.width/2, zframe.origin.y + zframe.size.height/2);
-    if (wyrame.size.width != 0) {
-        point = CGPointMake(wyrame.origin.x + wyrame.size.width/2, wyrame.origin.y + wyrame.size.height/2);
-    }
-    positionAnimation.toValue = [NSValue valueWithCGPoint:point];
-    [imageview.layer pop_addAnimation:positionAnimation forKey:@"layerPositionAnimation"];
-    POPSpringAnimation *boundsAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerBounds];
-    if (wyrame.size.width != 0) {
-        boundsAnimation.toValue = [NSValue valueWithCGRect:wyrame];
-    }else{
-        boundsAnimation.toValue = [NSValue valueWithCGRect:zframe];
-    }
-    [imageview.layer pop_addAnimation:boundsAnimation forKey:@"boundsAnimation"];
-    [positionAnimation setCompletionBlock:^(POPAnimation *animation, BOOL finished) {
-        [self dismissViewControllerAnimated:NO completion:nil];
-    }];
-*/
 }
 
 @end
