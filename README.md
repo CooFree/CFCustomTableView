@@ -9,3 +9,8 @@
 
 ![](/CFCustomTableView/1.gif)
 
+
+
+- 如需要更多样式的cell滑动按钮操作参考项目  
+[MGSwipeTableCell](https://github.com/MortimerGoro/MGSwipeTableCell)
+![](https://github.com/MortimerGoro/MGSwipeTableCell/blob/master/readme-assets/RoundTableViewCell.png)
